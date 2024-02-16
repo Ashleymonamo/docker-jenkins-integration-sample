@@ -8,10 +8,10 @@
 FROM openjdk:11
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /jenkins-docker
 
 # Copy the Java application JAR file
-COPY target/docker-jenkins.jar /app
+COPY target/docker-jenkins.jar  /jenkins-docker
 
 # Set the entry point to run the Java application
 ENTRYPOINT ["java", "-jar", "/app/docker-jenkins.jar"]
